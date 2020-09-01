@@ -1,48 +1,56 @@
-const fs = require('fs')
-
+const fs = require('fs');
+const fsPromise = fs.promises;
 
 class MyDB {
     constructor() {
-        this.path = './tables/';
     }
 
-
-
-    getUser(column=null) {
-        const uesrs = null;
-        fs.readFile(this.path+'users.json', 'utf8', (err, data) => {
-            if (err) {
-                console.log(err)
-            }
-            else users = JSON.parse(data);
-        });
-        return users;
+    async get(table, column = null, operator = null, value = null) {
+        try{
+            let data = await fsPromise.readFile(`${__dirname}/tables/${table}.json`);
+            data = JSON.parse(data).data;
+            if (column) {
+                if (operator == '=') data = data.find(u => u[column] == value)
+                else if (operator == '<') data = data.find(u => u[column] < value)
+                else if (operator == '<=') data = data.find(u => u[column] <= value)
+                else if (operator == '>') data = data.find(u => u[column] > value)
+                else if (operator == '>=') data = data.find(u => u[column] >= value)
+                else if (operator == '!=') data = data.find(u => u[column] != value)
+                }
+            return (data.length == 1)? data[0]:data;
+        }catch(err){
+            console.log(err);
+        }
+       
     }
 
-    postUser(req) {
+    async postUser(req) {
         const { id, password, name } = req.body;
+        const path = `${__dirname}/tables/users.json`;
+        // const path = `${__dirname}/tables/${table}.json`;
 
-        fs.readFile(this.userPath, 'utf8', (err, data) => {
+        fs.readFile(path, 'utf8', async (err, data) => {
             if (err) {
-                new Error(console.log("error"));
+                console.log(err);
                 return;
             }
 
             const postDB = JSON.parse(data);
 
-            if (Object.keys(postDB).indexOf(id) != -1) {
-                postDB[id] = {
+            if (!postDB.data.find(e => e.id == id)) {
+                const newPost = {
                     "id": id,
                     "password": password,
                     "name": name
                 }
-                const users = JSON.stringify(postDB, null, 4);
-                fs.writeFile(this.userPath, users, 'utf8', (err, file) => {
+                postDB.data.push(newPost);
+                const updateData = JSON.stringify(postDB, null, 4);
+                await fsPromise.writeFile(path, updateData, 'utf8', (err, file) => {
                     if (err) {
-                        console.error('User Post 실패');
+                        console.error('Post 실패');
                     }
 
-                    console.log("User Post 성공");
+                    console.log("Post 성공");
                 });
             } else {
                 console.log("Post 실패 : 이미 존재하는 ID");

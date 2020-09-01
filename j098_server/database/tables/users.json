@@ -1,7 +1,14 @@
 {
-  "admin": {
-    "id": "admin",
-    "password": "1234",
-    "name": "sws"
-  }
+    "data": [
+        {
+            "id": "admin",
+            "password": "1234",
+            "name": "sws"
+        },
+        {
+            "id": "aaa",
+            "password": "12345",
+            "name": "hoho"
+        }
+    ]
 }
