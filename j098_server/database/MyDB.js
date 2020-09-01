@@ -5,29 +5,41 @@ class MyDB {
     constructor() {
     }
 
-    async get(table, column = null, operator = null, value = null) {
+    async find(table, column = null, operator = null, value = null) {
         try{
             let data = await fsPromise.readFile(`${__dirname}/tables/${table}.json`);
             data = JSON.parse(data).data;
             if (column) {
-                if (operator == '=') data = data.find(u => u[column] == value)
-                else if (operator == '<') data = data.find(u => u[column] < value)
-                else if (operator == '<=') data = data.find(u => u[column] <= value)
-                else if (operator == '>') data = data.find(u => u[column] > value)
-                else if (operator == '>=') data = data.find(u => u[column] >= value)
-                else if (operator == '!=') data = data.find(u => u[column] != value)
+                if (operator == '=') data = data.filter(u => u[column] == value)
+                else if (operator == '<') data = data.filter(u => u[column] < value)
+                else if (operator == '<=') data = data.filter(u => u[column] <= value)
+                else if (operator == '>') data = data.filter(u => u[column] > value)
+                else if (operator == '>=') data = data.filter(u => u[column] >= value)
+                else if (operator == '!=') data = data.filter(u => u[column] != value)
                 }
-            return (data.length == 1)? data[0]:data;
+            return data
         }catch(err){
             console.log(err);
         }
-       
+    }
+
+    async findOne(table, pk, value) {
+        try {
+            let data = await fsPromise.readFile(`${__dirname}/tables/${table}.json`);
+            data = JSON.parse(data).data;
+            data = data.find(e => e[pk] == value)
+
+            if(data) return data;
+            return null;
+        } catch (err) {
+            console.log(err);
+        }
+
     }
 
     async postUser(req) {
-        const { id, password, name } = req.body;
+        const { id, password, name, phone, email } = req.body;
         const path = `${__dirname}/tables/users.json`;
-        // const path = `${__dirname}/tables/${table}.json`;
 
         fs.readFile(path, 'utf8', async (err, data) => {
             if (err) {
@@ -41,7 +53,9 @@ class MyDB {
                 const newPost = {
                     "id": id,
                     "password": password,
-                    "name": name
+                    "name": name,
+                    "phone" : phone,
+                    "email" : email
                 }
                 postDB.data.push(newPost);
                 const updateData = JSON.stringify(postDB, null, 4);

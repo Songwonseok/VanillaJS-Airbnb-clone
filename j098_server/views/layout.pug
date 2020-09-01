@@ -3,5 +3,25 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script.
+      function onLogin(){
+        $.ajax({
+          "url": "/auth/login",
+          "method": "GET"
+        }); 
+      }
+      function onSignUp(){
+        $.ajax({
+          "url": "/users/signup",
+          "method": "GET"
+        }); 
+      }
   body
+    div.container
+        div.item 
+            img(src='/images/logo.PNG', height='50px')
+        div.item
+            button(onclick='onLogin()') 로그인
+            button(onclick='onSignUp()') 회원가입
     block content

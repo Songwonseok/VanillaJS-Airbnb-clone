@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h2 로그인
+  form(action='/auth/login', method='post')
+      table
+          tr
+              td
+                  input(type='text', placeholder='아이디',name='id')
+          tr
+              td
+                  input(type='password', placeholder='비밀번호', name='password')
+          tr
+              td
+                  input(type='submit', value='로그인')
+
+        
