@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const MyDB = require('../database/MyDB')
-const db = new MyDB();
+const db = require('../database/MyDB')
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10; // 값이 높을 수록 비용 소요가 큼

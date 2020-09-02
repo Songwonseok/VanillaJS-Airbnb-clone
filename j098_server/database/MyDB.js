@@ -76,6 +76,6 @@ class MyDB {
 
 }
 
+const myDB = new MyDB();
 
-
-module.exports = MyDB;
+module.exports = myDB;

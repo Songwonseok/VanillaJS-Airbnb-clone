@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const signup = require('./signup')
-const auth = require('./auth')
+const login = require('./login')
 const sm = require('../session/sessionManager')
 
 
@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
 
 
 router.use(signup);
-router.use('/auth',auth);
+router.use(login);
 
 
 module.exports = router;
