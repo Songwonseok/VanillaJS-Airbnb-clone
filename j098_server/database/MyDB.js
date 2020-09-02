@@ -37,8 +37,8 @@ class MyDB {
 
     }
 
-    async postUser(req) {
-        const { id, password, name, phone, email } = req.body;
+    async postUser(values) {
+        const { id, password, name, phone, email } = values;
         const path = `${__dirname}/tables/users.json`;
 
         fs.readFile(path, 'utf8', async (err, data) => {
