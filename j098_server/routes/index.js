@@ -9,9 +9,7 @@ const sm = require('../session/sessionManager')
 const db = require('../database/MyDB')
 
 router.get('/', async (req, res, next) => {
- 
   res.render('main', { title: 'airbnb', message: '메인페이지' });
-  
 });
 
 router.post('/', async (req, res, next) => {
