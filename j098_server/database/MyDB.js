@@ -64,10 +64,7 @@ class MyDB {
         console.log(targetDB.auto_increment);
         // autoIncrement가 0이 아니면
         if (targetDB.auto_increment>0) {
-            console.log('오토');
-            console.log(params);
             params[PK] = targetDB.auto_increment++;
-            console.log(params);
         }
 
         // Primary Key가 중복되는지 확인

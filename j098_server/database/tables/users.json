@@ -1,5 +1,5 @@
 {
-    "auto_increment": 1,
+    "auto_increment": 0,
     "PK": "id",
     "rows": [
         {
@@ -15,6 +15,13 @@
             "name": "af",
             "phone": "010-5555-4444",
             "email": "guest@aaaa.com"
+        },
+        {
+            "id": "tester",
+            "password": "$2b$10$B.AYOt.R9tOamJ1kr8MRXu78RJ9rZp6vRhOplGNpsMoxkedzB8EdG",
+            "name": "테스터",
+            "phone": "010-5555-7777",
+            "email": "asf@naver.com"
         }
     ]
 }
