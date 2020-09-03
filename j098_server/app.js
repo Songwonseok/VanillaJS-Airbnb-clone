@@ -8,11 +8,12 @@ var Router = require('./routes/index')
 
 var app = express();
 const sm = require('./session/sessionManager')
+const db = require('./database/MyDB')
 
 // 1시간에 한번씩 세션 정리
 setInterval(() => {
   sm.emit('updateSession');
-}, 3600000)
+}, 60*60*1000)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

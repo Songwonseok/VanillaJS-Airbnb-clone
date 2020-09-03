@@ -3,11 +3,22 @@ const fsPromise = fs.promises;
 
 class MyDB {
     constructor() {
+        this.path =`${__dirname}/tables/`;
+        this.tables = ['users']
+        // DB 잘 연동되는지 확인
+        this.tables.forEach( t => {
+            fs.readFile(`${this.path+t}.json`, (err,data) =>{
+                if(err) {
+                    console.error('DB 연동 실패');
+                    process.exit();
+                }
+            })
+        })
     }
 
     async find(table, column = null, operator = null, value = null) {
         try{
-            let data = await fsPromise.readFile(`${__dirname}/tables/${table}.json`);
+            let data = await fsPromise.readFile(`${this.path + table}.json`);
             data = JSON.parse(data).data;
             if (column) {
                 if (operator == '=') data = data.filter(u => u[column] == value)
@@ -19,61 +30,90 @@ class MyDB {
                 }
             return data
         }catch(err){
-            console.log(err);
+            console.lerrorog(err);
         }
     }
 
-    async findOne(table, pk, value) {
+    async findOne(table, pk) {
         try {
-            let data = await fsPromise.readFile(`${__dirname}/tables/${table}.json`);
+            let data = await fsPromise.readFile(`${this.path+ table}.json`);
             data = JSON.parse(data).data;
-            data = data.find(e => e[pk] == value)
+            const PK = data.PK;
+            data = data.find(e => e[PK] == pk)
 
             if(data) return data;
             return null;
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
 
     }
 
-    async postUser(values) {
-        const { id, password, name, phone, email } = values;
-        const path = `${__dirname}/tables/users.json`;
+    async insert(table, params) {
+        const path = `${this.path + table}.json`;
+        let result = false;
+
 
         fs.readFile(path, 'utf8', async (err, data) => {
             if (err) {
-                console.log(err);
-                return;
+                return console.error(err);
             }
 
             const postDB = JSON.parse(data);
+            const PK = postDB.PK;
 
-            if (!postDB.data.find(e => e.id == id)) {
-                const newPost = {
-                    "id": id,
-                    "password": password,
-                    "name": name,
-                    "phone" : phone,
-                    "email" : email
-                }
-                postDB.data.push(newPost);
+            // autoIncrement가 0이 아니면
+            if (!postDB.auto_increment){
+                params[PK] = postDB.auto_increment++;
+            }
+
+            // Primary Key가 중복되는지 확인
+            if (!postDB.data.find(e => e[PK] == params[PK])) {
+                postDB.data.push(params);
                 const updateData = JSON.stringify(postDB, null, 4);
                 await fsPromise.writeFile(path, updateData, 'utf8', (err, file) => {
                     if (err) {
-                        console.error('Post 실패');
+                        return console.error('Post 실패');
                     }
-
-                    console.log("Post 성공");
+                    result = true;
                 });
             } else {
-                console.log("Post 실패 : 이미 존재하는 ID");
+                console.error("Post 실패 : 이미 존재하는 ID");
             }
-
         });
+        return result
     }
 
+    async delete(table, pk) {
+        const path = `${this.path + table}.json`;
+        let result = false;
 
+        fs.readFile(path, 'utf8', async (err, data) => {
+            if (err) {
+                return console.error(err);
+            }
+            const postDB = JSON.parse(data);
+            const PK = postDB.PK;
+
+            // Primary Key가 존재하는지 확인
+            const index = postDB.data.findIndex(obj => obj[PK] == pk)
+
+            // 존재 한다면 해당 인덱스 삭제          
+            if (index != -1) {
+                postDB.data.splice(index, 1);
+                const updateData = JSON.stringify(postDB, null, 4);
+                await fsPromise.writeFile(path, updateData, 'utf8', (err, file) => {
+                    if (err) {
+                        return console.error('Delete 실패');
+                    }
+                    result = true;
+                });
+            } else {
+                console.error("Delete 실패 : 존재하지 않는 ID");
+            }
+        });
+        return result
+    }
 }
 
 const myDB = new MyDB();

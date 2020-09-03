@@ -1,11 +1,13 @@
 {
-    "data": [
-        {
-            "id": "admin",
-            "password": "$2b$10$k5hJnZz82lS6iaJvzRJYS.cH9TTpeHMNb4p.AQgooCE9fD3pVTTS6",
-            "name": "sws",
-            "phone": "010-1111-1011",
-            "email": "dnja@naver.com"
-        }
-    ]
+  "auto_increment": 0,
+  "PK": "id",
+  "data": [
+    {
+      "id": "admin",
+      "password": "$2b$10$k5hJnZz82lS6iaJvzRJYS.cH9TTpeHMNb4p.AQgooCE9fD3pVTTS6",
+      "name": "sws",
+      "phone": "010-1111-1011",
+      "email": "dnja@naver.com"
+    }
+  ]
 }

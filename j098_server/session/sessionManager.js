@@ -18,7 +18,7 @@ class SessionManager extends EventEmitter{
         })
     }
     
-    // 세션의 시간이 끝났으면 삭제, 30분 이하로 남았으면 갱신
+    // 해당 sid를 사용할때마다 세션의 시간이 끝났으면 삭제, 30분 이하로 남았으면 갱신
     get(sid){
         const session = this.hashTable.get(sid);
         if(session){

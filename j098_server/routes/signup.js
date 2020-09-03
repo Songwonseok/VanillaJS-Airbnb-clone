@@ -12,7 +12,6 @@ router.get('/signup', async (req, res, next) => {
 })
 
 router.post('/signup', async (req,res,next) => {
-  console.log('들어옴');
   //비밀번호를 암호화 시킴
   bcrypt.genSalt(saltRounds, function (err, salt) {
     if (err) return next(err)
@@ -21,8 +20,9 @@ router.post('/signup', async (req,res,next) => {
       if (err) return next(err)
       req.body.password = hash
       
-      await db.postUser(req.body)
-      res.redirect('/')
+      const result = await db.postUser(req.body)
+      if (result) res.redirect('/');
+      else res.send('<script type="text/javascript"> alert("이미 가입된 회원입니다."); window.location.href = "/signup"</script>')
     });
   });
 })
