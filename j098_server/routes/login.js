@@ -16,7 +16,7 @@ router.get('/login', (req, res, next) => {
 // 
 router.post('/login', async (req, res, next) => {
     const { id, password } = req.body
-    const user = await db.findOne('users','id', id);
+    const user = await db.findOne('users', id);
     
     // 1. ID 체크
     if (!user) {

@@ -1,0 +1,57 @@
+{
+    "auto_increment": 4,
+    "PK": "id",
+    "rows": [
+        {
+            "id": 1,
+            "name": "서대문아파트",
+            "address": "서울시 서대문구 남가좌동 서대문아파트 101호",
+            "host_id": "admin",
+            "amenties": [
+                "와이파이",
+                "에어컨",
+                "주차장"
+            ],
+            "capacity": 4,
+            "bedroom": 1,
+            "bed": 2,
+            "bathroom": 1,
+            "weekday_price": 30000,
+            "weekend_price": 45000
+        },
+        {
+            "name": "힐튼호텔",
+            "address": "서울시 서대문구 힐튼",
+            "host_id": "admin",
+            "amenties": [
+                "와이파이",
+                "에어컨",
+                "주차장"
+            ],
+            "capacity": 4,
+            "bedroom": 1,
+            "bed": 2,
+            "bathroom": 1,
+            "weekday_price": 50000,
+            "weekend_price": 70000,
+            "id": 2
+        },
+        {
+            "id": 3,
+            "name": "힐튼호텔",
+            "address": "서울시 서대문구 힐튼",
+            "host_id": "admin",
+            "amenties": [
+                "와이파이",
+                "에어컨",
+                "주차장"
+            ],
+            "capacity": 4,
+            "bedroom": 1,
+            "bed": 2,
+            "bathroom": 1,
+            "weekday_price": 50000,
+            "weekend_price": 70000
+        }
+    ]
+}

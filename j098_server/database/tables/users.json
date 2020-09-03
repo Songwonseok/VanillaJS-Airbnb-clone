@@ -1,13 +1,20 @@
 {
-  "auto_increment": 0,
-  "PK": "id",
-  "rows": [
-    {
-      "id": "admin",
-      "password": "$2b$10$k5hJnZz82lS6iaJvzRJYS.cH9TTpeHMNb4p.AQgooCE9fD3pVTTS6",
-      "name": "sws",
-      "phone": "010-1111-1011",
-      "email": "dnja@naver.com"
-    }
-  ]
+    "auto_increment": 1,
+    "PK": "id",
+    "rows": [
+        {
+            "id": "admin",
+            "password": "$2b$10$k5hJnZz82lS6iaJvzRJYS.cH9TTpeHMNb4p.AQgooCE9fD3pVTTS6",
+            "name": "sws",
+            "phone": "010-1111-1011",
+            "email": "dnja@naver.com"
+        },
+        {
+            "id": "guest",
+            "password": "$2b$10$EounoOsYiNn7.ZPL7f70e.NgqATVM4rJl.iOX8fsFJ.Y.BdSdEpfW",
+            "name": "af",
+            "phone": "010-5555-4444",
+            "email": "guest@aaaa.com"
+        }
+    ]
 }

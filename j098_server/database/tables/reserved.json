@@ -1,0 +1,30 @@
+{
+    "auto_increment": 4,
+    "PK": "id",
+    "rows": [
+        {
+            "id": 1,
+            "check_in": "2020-09-04",
+            "check_out": "2020-09-05",
+            "room_id": 1,
+            "user_id": 2,
+            "price": 30000
+        },
+        {
+            "id": 2,
+            "check_in": "2020-09-03",
+            "check_out": "2020-09-06",
+            "room_id": 1,
+            "user_id": 2,
+            "price": 120000
+        },
+        {
+            "id": 3,
+            "check_in": "2020-09-03",
+            "check_out": "2020-09-06",
+            "room_id": 2,
+            "user_id": 2,
+            "price": 190000
+        }
+    ]
+}
