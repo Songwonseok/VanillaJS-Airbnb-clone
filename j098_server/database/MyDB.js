@@ -19,7 +19,7 @@ class MyDB {
     async find(table, column = null, operator = null, value = null) {
         try{
             let data = await fsPromise.readFile(`${this.path + table}.json`);
-            data = JSON.parse(data).data;
+            data = JSON.parse(data).rows;
             if (column) {
                 if (operator == '=') data = data.filter(u => u[column] == value)
                 else if (operator == '<') data = data.filter(u => u[column] < value)
@@ -37,9 +37,9 @@ class MyDB {
     async findOne(table, pk) {
         try {
             let data = await fsPromise.readFile(`${this.path+ table}.json`);
-            data = JSON.parse(data).data;
+            data = JSON.parse(data);
             const PK = data.PK;
-            data = data.find(e => e[PK] == pk)
+            data = data.rows.find(e => e[PK] == pk)
 
             if(data) return data;
             return null;
@@ -68,8 +68,8 @@ class MyDB {
             }
 
             // Primary Key가 중복되는지 확인
-            if (!postDB.data.find(e => e[PK] == params[PK])) {
-                postDB.data.push(params);
+            if (!postDB.rows.find(e => e[PK] == params[PK])) {
+                postDB.rows.push(params);
                 const updateData = JSON.stringify(postDB, null, 4);
                 await fsPromise.writeFile(path, updateData, 'utf8', (err, file) => {
                     if (err) {
@@ -96,11 +96,11 @@ class MyDB {
             const PK = postDB.PK;
 
             // Primary Key가 존재하는지 확인
-            const index = postDB.data.findIndex(obj => obj[PK] == pk)
+            const index = postDB.rows.findIndex(obj => obj[PK] == pk)
 
             // 존재 한다면 해당 인덱스 삭제          
             if (index != -1) {
-                postDB.data.splice(index, 1);
+                postDB.rows.splice(index, 1);
                 const updateData = JSON.stringify(postDB, null, 4);
                 await fsPromise.writeFile(path, updateData, 'utf8', (err, file) => {
                     if (err) {
