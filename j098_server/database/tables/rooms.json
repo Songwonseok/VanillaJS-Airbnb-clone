@@ -17,7 +17,8 @@
             "bed": 2,
             "bathroom": 1,
             "weekday_price": 30000,
-            "weekend_price": 45000
+            "weekend_price": 45000,
+            "image" : ""
         },
         {
             "name": "힐튼호텔",
@@ -34,7 +35,8 @@
             "bathroom": 1,
             "weekday_price": 50000,
             "weekend_price": 70000,
-            "id": 2
+            "id": 2,
+            "image": ""
         },
         {
             "id": 3,
@@ -51,7 +53,8 @@
             "bed": 2,
             "bathroom": 1,
             "weekday_price": 50000,
-            "weekend_price": 70000
+            "weekend_price": 70000,
+            "image": ""
         }
     ]
 }

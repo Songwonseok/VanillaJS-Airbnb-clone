@@ -7,18 +7,10 @@ const main = require('./main')
 
 const sm = require('../session/sessionManager')
 const db = require('../database/MyDB')
+const sessionCheck = require('../middleware/sessionCheck')
 
-router.get('/', async (req, res, next) => {
-  res.render('main', { title: 'airbnb', message: '메인페이지' });
-});
 
-router.post('/', async (req, res, next) => {
-
-  db.insert('rooms', req.body);
-  const list = await db.find('rooms')
-  res.send(req.body);
-});
-
+router.use(sessionCheck);
 router.use(signup);
 router.use(login);
 router.use(main);
