@@ -9,7 +9,7 @@ const auth = require('../middleware/auth')
 
 router.get('/', async (req, res, next) => {
     const user = (req.user)? req.user: null;
-    res.render('main', { title: 'airbnb', message: '메인페이지', user: user });
+    res.render('main', { title: 'airbnb', message: '메인페이지', user: user, test:'abcde' });
 });
 
 // 주소, 체크인, 체크아웃, 인원

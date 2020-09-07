@@ -1,8 +1,24 @@
 extends layout
 
 block script
-  script.
-    var ab = 20;
+  script(src='/javascripts/main.js')
+  link(rel='stylesheet', href='/stylesheets/main.css')
 block content
-  h1 #{user}
-  p #{message}
+  aside(id="main_aside")
+    input(id="stay", type="radio", name="tab", checked="checked")
+    input(id="experience", type="radio", name="tab")
+    input(id="online", type="radio", name="tab")
+    section.buttons
+      label(for="stay") 숙박
+      label(for="experience") 체험
+      label(for="online") 온라인 체험
+    br
+    div.tab_item
+      h1 숙박 검색창
+    div.tab_item
+      h1 체험 검색창
+    div.tab_item
+      h1 온라인 체험
+
+      
+    

@@ -61,7 +61,7 @@ class MyDB {
         const data = await fsPromise.readFile(path);
         const targetDB = JSON.parse(data);
         const PK = targetDB.PK;
-        console.log(targetDB.auto_increment);
+        
         // autoIncrement가 0이 아니면
         if (targetDB.auto_increment>0) {
             params[PK] = targetDB.auto_increment++;
