@@ -8,7 +8,7 @@ const sm = require('../session/sessionManager')
 const db = require('../database/MyDB')
 
 router.get('/login', (req, res, next) => {
-
+    console.log('로그인창');
     res.render('login');
 });
 

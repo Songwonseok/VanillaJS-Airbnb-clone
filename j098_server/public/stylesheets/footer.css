@@ -1,0 +1,10 @@
+.footer_container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer_item {
+    flex:none;
+    height:100%;
+}

@@ -1,27 +1,8 @@
 extends layout
 
 block script
-  script(src='/javascripts/main.js')
-  link(rel='stylesheet', href='/stylesheets/main.css')
+
 block content
-  div.tab_wrap
-    div.tab_menu_container
-      button(class='tab_menu_btn on', id='stayBtn') 숙소
-      button(class='tab_menu_btn', id='experienceBtn') 체험
-      button(class='tab_menu_btn', id='onlineBtn') 온라인 체험
-    div.tab_box_container
-      div(class='tab_box on', id='stay')
-        form(class="search", action='/search', method='post')
-          input(class="stay_option",type='text', placeholder='위치', name='address')
-          input(class="stay_option",type='date', placeholder='체크인', name='check_in')
-          input(class="stay_option",type='date', placeholder='체크아웃', name='check_out')
-          input(class="stay_option",type='number', placeholder='인원', name='personnel')
-          button.searchBtn 
-            i(class="fas fa-search fa-2x")
-      div(class='tab_box', id='experience')
-        form(class="search", action='/search', method='post')
-          input(class="exp_option",type='text', placeholder='위치', name='address')
-          input(class="exp_option",type='date', placeholder='날짜', name='date')
-          button.searchBtn
-            i(class="fas fa-search fa-2x")
-      div(class='tab_box', id='online') 온라인체험
+  div 
+    //- h1 메인페이지
+  
