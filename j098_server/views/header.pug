@@ -42,5 +42,17 @@ div.header_container
         div.header_dropdown
             button.dropbtn 메뉴
                 div.dropdown-content
-                    a(href="/login", id='login') 로그인
-                    a(href="/signup") 회원가입
+                    a#loginBtn 로그인
+                    a#signupBtn 회원가입
+
+    //- 모달
+    div(class="login hidden")
+        div.modal_overlay
+        div.modal_content
+            include login.pug
+
+    div(class="signup hidden")
+        div.modal_overlay
+        div.modal_content
+            include signup.pug
+            

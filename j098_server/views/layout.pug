@@ -5,15 +5,15 @@ html
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/header.css')
     link(rel='stylesheet', href='/stylesheets/footer.css')
-    script(src='/javascripts/searchBar.js')
+    script(src='/javascripts/header.js')
     script(src="https://use.fontawesome.com/releases/v5.2.0/js/all.js")
     block script
   body
     header
       include header.pug
+    hr
     
-    section
-      block content
+    block content
     hr
     footer
       include footer.pug

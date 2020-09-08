@@ -1,4 +1,5 @@
 window.onload = () => {
+    // 검색창
     const menuBtnList = document.getElementsByClassName('tab_menu_btn');
     const boxList = document.getElementsByClassName('tab_box');
 
@@ -30,6 +31,42 @@ window.onload = () => {
         removeOn(boxList);
         item.classList.add('on');
     })
+
+    // 모달창
+    const loginBtn = document.getElementById('loginBtn');
+    const login = document.querySelector(".login");
+    const loginOverlay = login.querySelector(".modal_overlay");
+    const loginCloseBtn = login.querySelector("button");
+
+    const signupBtn = document.getElementById('signupBtn');
+    const signup = document.querySelector(".signup");
+    const signupOverlay = signup.querySelector(".modal_overlay");
+    const signupCloseBtn = signup.querySelector("button");
+
+    
+
+    const openLogin = () => {
+        login.classList.remove('hidden');
+    }
+    const closeLogin = () => {
+        login.classList.add("hidden");
+    }
+
+    const openSignup = () => {
+        signup.classList.remove('hidden');
+    }
+
+    const closeSignup = () => {
+        signup.classList.add("hidden");
+    }
+
+    loginCloseBtn.addEventListener("click", closeLogin);
+    loginOverlay.addEventListener("click", closeLogin)
+    loginBtn.addEventListener("click", openLogin);
+
+    signupCloseBtn.addEventListener("click", closeSignup);
+    signupOverlay.addEventListener("click", closeSignup);
+    signupBtn.addEventListener("click", openSignup);;
 
 }
 

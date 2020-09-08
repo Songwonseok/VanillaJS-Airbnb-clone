@@ -1,29 +1,25 @@
-doctype html
-html
-  head
-    title= title
-    block script
-  body
-    h2 회원가입
-    form(action='/signup', method='post')
-        table
-            tr
-                td
-                    input(type='text', placeholder='아이디',name='id')
-            tr
-                td
-                    input(type='password', placeholder='비밀번호', name='password')
-            tr
-                td
-                    input(type='text', placeholder='이름',name='name')
-            tr
-                td
-                    input(type='text', placeholder='전화번호', name='phone')
-            tr
-                td
-                    input(type='text', placeholder='이메일', name='email')
-            tr
-                td
-                    input(type='submit', value='회원가입')
+h2 회원가입
+form(action='/signup', method='post')
+    table
+        tr
+            td
+                input(type='text', placeholder='아이디',name='id')
+        tr
+            td
+                input(type='password', placeholder='비밀번호', name='password')
+        tr
+            td
+                input(type='text', placeholder='이름',name='name')
+        tr
+            td
+                input(type='text', placeholder='전화번호', name='phone')
+        tr
+            td
+                input(type='text', placeholder='이메일', name='email')
+        tr
+            td
+                input(type='submit', value='회원가입')
+button &times
+
 
         
