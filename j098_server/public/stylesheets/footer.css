@@ -3,8 +3,11 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .footer_item {
     flex:none;
     height:100%;
+}
+a {
+    text-decoration:none;
+    color:black;
 }

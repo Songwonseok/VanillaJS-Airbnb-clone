@@ -143,32 +143,3 @@ input {
 .search {
   width: 400px;
 }
-/* .search{
-  display: flex;
-  justify-content: space-around;
-  height: 60px;
-  width: 800px;
-  border:solid;
-  border-radius: 15px;
-}
-
-.stay_option {
-  height: 40px;
-  border: none;
-  margin: 10px auto;
-}
-
-.stay_option:focus {
-  border:gray;
-}
-
-.exp_option {
-  height: 40px;
-  width: 50%;
-  border: none;
-  margin: 10px auto;
-}
-
-.exp_option:focus {
-  border:gray;
-} */
