@@ -125,6 +125,7 @@
   border-right-style: solid;
   border-right-width: thin;
   border-right-color:rgb(156, 146, 146) ;
+  display:block;
 }
 
 label {
