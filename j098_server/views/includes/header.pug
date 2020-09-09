@@ -1,12 +1,15 @@
-div.header_container
+div.header_top
+    a(href="https://www.airbnb.co.kr/resources/hosting-homes?persona=guest") 에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.
+
+nav.header_container
     div.header_item
         a(href='/')
-            img(src='/images/logo.PNG', height='50px')
-    div.header_item
+            img(src='/images/logo.PNG', height='47px')
+    div(class="header_item searchBar")
         div.tab_menu_container
             button(class='tab_menu_btn on', id='stayBtn') 숙소
             button(class='tab_menu_btn', id='experienceBtn') 체험
-            a(href="/")
+            a(href="https://www.airbnb.co.kr/s/experiences/online")
                 button(class='tab_menu_btn', id='onlineBtn') 온라인 체험
         div.tab_box_container
             div(class='tab_box on', id='stay')
@@ -37,22 +40,36 @@ div.header_container
                         input#exp_date(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='date')
                     button.searchBtn
                         i(class="fas fa-search fa-2x")
-            div(class='tab_box', id='online') 온라인체험
+    div(class="header_item hostBtn")
+        a(href="https://www.airbnb.co.kr/host/homes")
+            button.hostBtn 호스트 되기
+    div(class="header_item")
+        button.globeBtn
+            img.globe(src='/images/globe.png')
+            i(class="fas fa-angle-down")
     div.header_item
         div.header_dropdown
-            button.dropbtn 메뉴
-                div.dropdown-content
-                    a#loginBtn 로그인
-                    a#signupBtn 회원가입
+            button.dropBtn
+                img.burger(src='/images/burger.png', height='20px')
+                img.user_icon(src='/images/user.png', height='30px')
+            div(class="dropdown-content hidden")
+                a#loginBtn 로그인
+                a#signupBtn 회원가입
+                hr
+                a(href="https://www.airbnb.co.kr/host/homes") 숙소 호스트 되기
+                a(href="https://www.airbnb.co.kr/d/onlinehost") 체험 호스트 되기
+                a(href="https://www.airbnb.co.kr/help/home") 도움말
 
-    //- 모달
     div(class="login hidden")
         div.modal_overlay
         div.modal_content
-            include login.pug
-
+            include login
     div(class="signup hidden")
         div.modal_overlay
         div.modal_content
-            include signup.pug
-            
+            include signup
+div(class="drop_overlay hidden")
+
+
+script(src='/javascripts/header.js')
+

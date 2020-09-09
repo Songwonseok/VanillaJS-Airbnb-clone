@@ -7,7 +7,7 @@
     flex:none;
     height:100%;
 }
-a {
+.footer_item > ul > li > a{
     text-decoration:none;
     color:black;
 }

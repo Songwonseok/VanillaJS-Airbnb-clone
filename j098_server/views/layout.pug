@@ -1,22 +1,25 @@
 doctype html
 html
   head
-    title= title
+    title= "숙소, 체험, 장소를 모두 한 곳에서 - 에어비앤비"
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/header.css')
     link(rel='stylesheet', href='/stylesheets/footer.css')
-    script(src='/javascripts/header.js')
+    link(rel='stylesheet', href='/stylesheets/modal.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
     script(src="https://use.fontawesome.com/releases/v5.2.0/js/all.js")
     block script
+
   body
     header
-      include header.pug
-    hr
+      include includes/header
     
-    block content
-    hr
+    main
+      block content
+    
     footer
-      include footer.pug
+      include includes/footer
+
         
 
 

@@ -1,8 +1,68 @@
+.header_top{
+  text-align: center;
+  background-color: rgb(247,247,247);
+  height: 50px;
+  padding: 15px;
+}
+
+.header_top > a {
+  color:black;
+  font-weight: bold;
+}
+
 .header_container {
+  padding: 10vw;
+  padding-top: 20px;
+  padding-bottom: 0;
   display: flex;
   justify-content:space-between;
-  width: 100%;
-  
+}
+
+.host{
+  margin-left: auto;
+}
+
+.hostBtn{
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+  border-style: none;
+  border-width: 1px;
+  border-radius: 32px;
+  width: 102px;
+  height: 42px;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.hostBtn:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.globeBtn {
+  background-color: white;
+  width: 60px;
+  height: 42px;
+  padding: 5px 0px 5px 0px;
+  border-style: none;
+  border-radius: 32px;
+  border-color: rgb(221, 221, 221);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.globeBtn:hover {
+  background-color: rgb(235, 235, 235);
+}
+.globe {
+  margin-top: 5px;
+  margin-right: 5px;
+  width:18px;
+  height: 18px;
+}
+.globeBtn > i {
+  margin-bottom: 5px;
 }
 
 .header_dropdown {
@@ -10,61 +70,72 @@
   height: 40px;
 }
 
-.dropbtn {
+.dropBtn {
   background-color: white;
-  width: 100px;
-  padding: 5px;
+  width: 77px;
+  height: 42px;
+  padding: 5px 0px 5px 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 32px;
+  border-color: rgb(221, 221, 221);
   cursor: pointer;
-  font-size: 16px;
+  display:flex;
+  justify-content: space-between;
+}
+.dropBtn:hover {
+  background-color: rgb(235, 235, 235);
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);;
+}
+
+.burger{
+  margin:5px 5px 5px 9px;
+  height: 18px;
+  width: 22px;
+}
+
+.user_icon {
+  margin-right: 5px;
+  height: 30px;
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 120px;
+  width: 150px;
+  margin-right: 30px;
+  background-color: white;
+  border-radius: 12px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 8px 16px;
+  margin:2px;
+  border-radius: 12px;
   text-decoration: none;
   display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropbtn:hover .dropdown-content {display: block;}
-
-
-#login {
-  font-weight:bold;
-}
-
-.searchBtn{
-  color:white;
-  background-image:radial-gradient(
-    circle at center center, 
-  rgb(255, 56, 92) 0%,
-   rgb(230, 30, 77) 27.5%, 
-   rgb(227, 28, 95) 40%, 
-   rgb(215, 4, 102) 57.5%, 
-   rgb(189, 30, 89) 75%, 
-   rgb(189, 30, 89) 100%);
-  border : none;
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  border-radius: 100%;
   cursor: pointer;
 }
 
+.dropdown-content a:hover {background-color: rgb(235, 235, 235);}
+
+
+.drop_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#loginBtn {
+  font-weight:bold;
+}
 
 .tab_menu_container {
   display:flex;
   justify-content: center;
+  z-index: -1;
 }
 .tab_menu_btn {
   background:none;
@@ -99,51 +170,69 @@
 .tab_box {
   display:none;
   padding:20px;
+
 }
 .tab_box.on {
   display:block;
 }
 
+.searchBar {
+  position: absolute;
+  margin-left: 10vw;
+}
+
+.searchBtn{
+  color:white;
+  background-color:rgb(255,56,92);
+  border : none;
+  flex:none;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
 .search_container {
   display: flex;
-  justify-content: space-around;
-  height: 60px;
-  width: 850px;
-
+  flex: 2;
+  height: 65px;
+  width: 820px;
   border: solid;
-  border-width: 2px;
-  border-radius: 15px;
+  border-width: 1px;
+  border-radius: 32px;
+  border-color: rgb(221, 221, 221);
 }
 
 .search_item {
-  flex:1;
-  margin: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 5px;
-  width: 160px;
+  flex:2;
+  min-width: 190px;
+  padding: 10px;
+  padding-left: 20px;
   border: none;
-  border-right-style: solid;
-  border-right-width: thin;
-  border-right-color:rgb(156, 146, 146) ;
+  border-radius: 32px;
+  border-right-color:rgb(235, 235, 235);
   display:block;
 }
-
-label {
-  font-weight: bold;
+.search_item:hover input {
+  background-color: rgb(235, 235, 235);
+}
+.search_item:hover {
+  background-color: rgb(235, 235, 235);
 }
 
 .search_item:focus {
   border:gray;
 }
 
-input {
+.search_item > input {
   border:none;
   height: 25px;
 }
 
-.search {
-  width: 400px;
+.search_item > label {
+  font-weight: bold;
 }
 
 .login {
@@ -183,6 +272,7 @@ input {
     width: 40%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
+
 .hidden {
     display:none;
 }

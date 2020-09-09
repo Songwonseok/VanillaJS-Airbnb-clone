@@ -16,7 +16,6 @@ router.get('/', async (req, res, next) => {
 // address, check_in, check_out, personnel
 router.post('/search',async (req, res, next) => {
     const { address, check_in, check_out, personnel} = req.body;
-    console.log(req.body);
     //1. 검색 주소와 인원에 맞는 숙소를 먼저 검색
     const rooms = await db.find('rooms',['address','capacity'],['like','>='],[address,personnel]);
 
