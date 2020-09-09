@@ -1,4 +1,19 @@
-section {
+.section_first {
+    background: url("/images/main/main1.PNG") no-repeat center/cover;
+    border-radius: 12px;
+    height: 387px;
+    margin: 0px 100px 20px 100px;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+}
+
+.section_first p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section_second {
     background-color: black;
     height: 300px;
     padding: 5vw;
