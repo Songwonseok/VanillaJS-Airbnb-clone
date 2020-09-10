@@ -15,7 +15,7 @@ form.signupForm(action='/signup', method='post')
                 input.modalInput(type='text', placeholder='이름',name='name', required)
         tr
             td
-                input.modalInput(type='text', placeholder='전화번호: 010-0000-0000', name='phone', required)
+                input.modalInput(type='text', placeholder='휴대전화 ex) 010-0000-0000', name='phone',pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" ,required)
         tr
             td
                 input.modalSubmit(type='submit', value='회원가입')

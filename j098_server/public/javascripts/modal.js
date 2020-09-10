@@ -5,7 +5,7 @@ function modalHandler(list) {
     });
 }
 
-const addModalListener = (className) => {
+function addModalListener (className){
     const openBtn = document.getElementById(className + 'Btn')
     const modal = document.querySelector("." + className);
     const overlay = modal.querySelector(".modal_overlay");
@@ -23,6 +23,4 @@ const addModalListener = (className) => {
     openBtn.addEventListener("click", openModal);
 }
 
-(function init(){
-    modalHandler(['login', 'signup']);
-})()
+export { addModalListener, modalHandler};

@@ -1,5 +1,5 @@
 {
-    "auto_increment": 4,
+    "auto_increment": 2,
     "PK": "id",
     "rows": [
         {
@@ -8,26 +8,8 @@
             "check_out": "2020-09-05",
             "nights": 1,
             "room_id": 1,
-            "user_id": 2,
+            "user_id": "admin@naver.com",
             "price": 30000
-        },
-        {
-            "id": 2,
-            "check_in": "2020-09-03",
-            "check_out": "2020-09-06",
-            "nights":3,
-            "room_id": 1,
-            "user_id": 2,
-            "price": 120000
-        },
-        {
-            "id": 3,
-            "check_in": "2020-09-03",
-            "check_out": "2020-09-06",
-            "nights": 3,
-            "room_id": 2,
-            "user_id": 2,
-            "price": 190000
         }
     ]
 }

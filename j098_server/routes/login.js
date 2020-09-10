@@ -25,7 +25,6 @@ router.post('/login', async (req, res, next) => {
         sm.set(sid, id);
         res.cookie('sid', sid);
         res.redirect('/');
-
     }
 });
 

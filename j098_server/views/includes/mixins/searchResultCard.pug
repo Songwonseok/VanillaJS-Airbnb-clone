@@ -8,3 +8,4 @@ mixin searchResultCard(room)
                 div.nightPrice='₩'+(room.price/room.nights).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"/"+'1박'
                 div.totalPrice='총 요금: ₩'+room.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             button.bookingBtn 예약하기
+                input(type='hidden', value=room)

@@ -22,7 +22,7 @@ nav.header_container
                         input#checkIn(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_in', required)
                     div.search_item
                         label(for="checkOut") 체크아웃
-                        input#checkOut(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_out',disabled, required)
+                        input#checkOut(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_out', required)
                     div.search_item
                         label(for="personnel") 인원
                         input#personnel(type='number', placeholder='게스트 추가', name='personnel', min="1", required)
@@ -52,12 +52,25 @@ nav.header_container
                 img.burger(src='/images/burger.png', height='20px')
                 img.user_icon(src='/images/user.png', height='30px')
             div(class="dropdown-content hidden")
-                a#loginBtn 로그인
-                a#signupBtn 회원가입
-                hr
-                a(href="https://www.airbnb.co.kr/host/homes") 숙소 호스트 되기
-                a(href="https://www.airbnb.co.kr/d/onlinehost") 체험 호스트 되기
-                a(href="https://www.airbnb.co.kr/help/home") 도움말
+                if user == null
+                    a#loginBtn 로그인
+                    a#signupBtn 회원가입
+                    hr
+                    a(href="https://www.airbnb.co.kr/host/homes") 숙소 호스트 되기
+                    a(href="https://www.airbnb.co.kr/d/onlinehost") 체험 호스트 되기
+                    a(href="https://www.airbnb.co.kr/help/home") 도움말
+                else
+                    a.afterLogin 메시지
+                    a.afterLogin 알림
+                    a.afterLogin 여행
+                    a.afterLogin 저장목록
+                    hr 
+                    a(href="https://www.airbnb.co.kr/host/homes") 숙소 호스트 되기
+                    a(href="https://www.airbnb.co.kr/d/onlinehost") 체험 호스트 되기
+                    a 계정
+                    hr
+                    a(href="https://www.airbnb.co.kr/help/home") 도움말
+                    a(href='/logout') 로그아웃
 
     div(class="login hidden")
         div.modal_overlay
@@ -67,8 +80,8 @@ nav.header_container
         div.modal_overlay
         div.modal_content
             include signup
-div(class="drop_overlay hidden")
+    div(class="drop_overlay hidden")
 
 
-script(src='/javascripts/header.js')
+script(type="module", src='/javascripts/header.js')
 

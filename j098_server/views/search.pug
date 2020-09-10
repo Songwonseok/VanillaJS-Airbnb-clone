@@ -1,13 +1,28 @@
 extends layout
 include includes/mixins/searchResultCard
-block script
 
 block content
     hr
     section.searchSection
         div.searchHeader 
-            div #{roomList.length}개의 숙소 | #{Number(check_in.slice(5,7))}월 #{Number(check_in.slice(8,10))}일 - #{Number(check_out.slice(5,7))}월 #{Number(check_out.slice(8,10))}일 | 게스트 #{personnel}명
-            div.largeText #{address}의 숙소
+            div #{roomList.length}개의 숙소 | #{Number(searchOption.check_in.slice(5,7))}월 #{Number(searchOption.check_in.slice(8,10))}일 - #{Number(searchOption.check_out.slice(5,7))}월 #{Number(searchOption.check_out.slice(8,10))}일 | 게스트 #{searchOption.personnel}명
+            div.largeText #{searchOption.address}의 숙소
         div.searchContainer
             each room in roomList
                 +searchResultCard(room)
+        
+        input#searchList(type='hidden',value=roomList)
+        input#reserveUser(type='hidden', value=user)
+        input#searchOption(type='hidden', value=searchOption)
+    div(class="reserve hidden")
+        div.modal_overlay
+        div.modal_content
+            include includes/reserve    
+
+    script(type="module", src='/javascripts/search.js')
+
+
+
+
+
+    

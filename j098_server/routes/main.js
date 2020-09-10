@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
 const db = require('../database/MyDB')
 const DAY = 1000*60*60*24;
 const auth = require('../middleware/auth')
+const sm = require('../session/sessionManager')
 
 router.get('/', async (req, res, next) => {
     const user = (req.user)? req.user: null;
@@ -43,27 +43,21 @@ router.post('/search',async (req, res, next) => {
         room.nights = nights;
         searchResult.push(room);
     })
-    res.render('search', { user:req.user, address: address, check_in: check_in, check_out: check_out, personnel: personnel, roomList: searchResult})
+    const searchOption = {
+        address: address, 
+        check_in: check_in, 
+        check_out: check_out, 
+        personnel: personnel
+    }
+    res.render('search', { user: req.user, searchOption: searchOption, roomList: searchResult})
 })
 
 
-// 아직 테스트용
 router.post('/reserve', auth,async (req, res, next) => {
-    //비밀번호를 암호화 시킴
-    const room = await db.findOne('rooms',req.body.room_id);
-    const checkIn = new Date(req.body.check_in);
-    const checkOut = new Date(req.body.check_out);
+    const reservePost = JSON.parse(req.body.reserveInfo)
+    await db.insert('reserved', reservePost)
 
-    // getDay() [일월화수목금토] = [0123456] 금토 주말
-    const nights = (checkOut.getTime() - checkIn.getTime()) / DAY;
-    const price = getPrice(room, checkIn,nights);
-
-    req.body.price = price;
-    req.body.nights = nights;
-
-    await db.insert('reserved',req.body)
-    const reserves = await db.find('reserved');
-    res.send(reserves);
+    res.redirect('/')
 })
 
 

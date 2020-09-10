@@ -1,0 +1,45 @@
+div.modalTop
+    button &times
+div.modalTitle 예약 정보
+form.reseveForm(action='/reserve', method='post')
+    input(type='hidden', name='reserveInfo')
+    div.container
+        tr
+            td
+                label.reserveLabel 날짜
+                div.reserveDate
+                    div.reserveDateItem
+                    div.reserveDateItem
+                        i(class="fas fa-arrow-right")
+                    div.reserveDateItem
+        tr
+            td
+                label.reserveLabel 인원
+                br
+                div.reservePersonnel
+                hr 
+        tr
+            td
+                div.priceContainer
+                    div.priceItem
+                    div.priceItem
+                hr
+        tr
+            td
+                div.priceContainer
+                    div.priceItem 수수료
+                    div.priceItem
+                hr 
+        tr
+            td
+                div.priceContainer
+                    div.totalItem 합계
+                    div.totalItem 
+        tr
+            td
+                input.modalSubmit(type='submit', value='예약하기')
+        
+
+
+
+        

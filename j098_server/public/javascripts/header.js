@@ -1,3 +1,4 @@
+ import { modalHandler} from './modal.js'
 const searchTabHandler = ()=>{
     // 검색창
     const menuBtnList = document.getElementsByClassName('tab_menu_btn');
@@ -52,12 +53,13 @@ function dropdownHandler() {
 }
 
 
-
-
 const settingMinDate = () => {
     const checkIn = document.querySelector('#checkIn');
+    const checkOut = document.querySelector('#checkOut');
+
     const today = new Date();
     checkIn.min = dateToString(today);
+    checkOut.min = dateToString(today);
 }
 
 const checkInListener = () => {
@@ -68,18 +70,18 @@ const checkInListener = () => {
         const nextDay = new Date(this.value);
         nextDay.setDate(nextDay.getDate() + 1);
         checkOut.min = dateToString(nextDay);
-        checkOut.removeAttribute('disabled');
     })
 }
 
 const dateToString = (date) => {
     return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, 0)}-${String(date.getDate()).padStart(2, 0)}`
 }
-
-(function init () {
+(function init() {
     searchTabHandler();
     dropdownHandler();
     settingMinDate();
+    modalHandler(['login', 'signup'])
     checkInListener();
 })()
+
 
