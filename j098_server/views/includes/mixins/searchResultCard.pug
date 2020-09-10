@@ -5,6 +5,6 @@ mixin searchResultCard(room)
         div.roomName=room.name
         div.roomBooking
             div
-                div.nightPrice='₩'+(room.price/room.nights)+"/"+room.nights+'박'
-                div.totalPrice='총 요금: ₩'+room.price
+                div.nightPrice='₩'+(room.price/room.nights).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"/"+'1박'
+                div.totalPrice='총 요금: ₩'+room.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
             button.bookingBtn 예약하기
