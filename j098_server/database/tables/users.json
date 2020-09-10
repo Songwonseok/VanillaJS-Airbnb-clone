@@ -3,32 +3,22 @@
     "PK": "id",
     "rows": [
         {
-            "id": "admin",
+            "id": "admin@naver.com",
             "password": "$2b$10$k5hJnZz82lS6iaJvzRJYS.cH9TTpeHMNb4p.AQgooCE9fD3pVTTS6",
             "name": "sws",
-            "phone": "010-1111-1011",
-            "email": "dnja@naver.com"
+            "phone": "010-1111-1011"
         },
         {
-            "id": "guest",
+            "id": "guest@aaaa.com",
             "password": "$2b$10$EounoOsYiNn7.ZPL7f70e.NgqATVM4rJl.iOX8fsFJ.Y.BdSdEpfW",
             "name": "af",
-            "phone": "010-5555-4444",
-            "email": "guest@aaaa.com"
+            "phone": "010-5555-4444"
         },
         {
-            "id": "tester",
+            "id": "tester@naver.com",
             "password": "$2b$10$B.AYOt.R9tOamJ1kr8MRXu78RJ9rZp6vRhOplGNpsMoxkedzB8EdG",
             "name": "테스터",
-            "phone": "010-5555-7777",
-            "email": "asf@naver.com"
-        },
-        {
-            "id": "",
-            "password": "$2b$10$TuSRjml0cUcbsnDScdLlb.xx8V1gESHVPiVMaYtPoz62T4tZ36s/u",
-            "name": "",
-            "phone": "",
-            "email": ""
+            "phone": "010-5555-7777"
         }
     ]
 }

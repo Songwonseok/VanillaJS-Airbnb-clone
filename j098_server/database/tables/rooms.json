@@ -7,7 +7,7 @@
             "type": "개인실",
             "name": "[Dongdaemun / Sindang] 서울CityviewX빔프로젝터 복층형 House",
             "address": "서울 중구 신당동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -28,7 +28,7 @@
             "type": "개인실",
             "name": "인터프렌즈 J. 포근한 여성전용 개인실 Women only",
             "address": "서울 강남구 논현동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -49,7 +49,7 @@
             "type": "아파트 전체",
             "name": "[STAY H#1]TimeSquareView!(NETFLIX)Near Station.복층",
             "address": "서울 영등포구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -70,7 +70,7 @@
             "type": "게스트 스위트 전체",
             "name": "dmyk_Carré",
             "address": "서울 종로구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -89,7 +89,7 @@
             "type": "게스트 스위트 전체",
             "name": "Designer hyojung's house 루프탑 이용! 명동.남산이 바로 앞!",
             "address": "서울 중구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -109,7 +109,7 @@
             "type": "집 전체",
             "name": "Seochon Night",
             "address": "서울 종로구 체부동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -129,7 +129,7 @@
             "type": "아파트 전체",
             "name": "신촌 개강 '대학생들의 방' 조경디자인생방 & 루프탑 바베큐 파티",
             "address": "서울 서대문구 신촌동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -150,7 +150,7 @@
             "type": "아파트 전체",
             "name": "#2 구로디지털단지역 2분도보#깨끗 깔끔 안락 힐링# 코로나 피해서 호캉스 하기 좋은 공간",
             "address": "서울 구로구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -171,7 +171,7 @@
             "type": "아파트 전체",
             "name": "신촌 개강 '대학생들의 방' 미대생 방 & 루프탑 바베큐파티",
             "address": "서울 서대문구 신촌동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -192,7 +192,7 @@
             "type": "아파트 전체",
             "name": "롯데월드/올림픽공원/ 아산병원에 최적❤️",
             "address": "서울 송파구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -213,7 +213,7 @@
             "type": "게스트용 별채 전체",
             "name": "대학로 Min's House!! 302",
             "address": "서울 종로구 이화동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "헤어드라이어",
@@ -234,7 +234,7 @@
             "type": "아파트 전체",
             "name": "[SUBWAY 3MIN] 신방화 [407]김포공항10분",
             "address": "서울 강서구 방화동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "엘리베이터",
@@ -255,7 +255,7 @@
             "type": "개인실",
             "name": "57 Myeongdong Hostel (Deluxe Double)//주차불가",
             "address": "서울 중구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "엘리베이터",
@@ -276,7 +276,7 @@
             "type": "집 전체",
             "name": "르릿 동대문 #401(복층타입) / DDP, APM Place 도보 3분",
             "address": "서울 중구 광희동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "건조기",
@@ -297,7 +297,7 @@
             "type": "개인실",
             "name": "Jin Jin House",
             "address": "서울 용산구 한남동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "건조기",
@@ -319,7 +319,7 @@
             "type": "호텔 객실",
             "name": "#연희장#프라이빗#홍대/연남동/#소독 #청결 #단독객실 # #루프탑",
             "address": "서울 서대문구 연희동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "건조기",
@@ -341,7 +341,7 @@
             "type": "아파트 전체",
             "name": "용산역2min_가장 청결한 곳_한강뷰💙시티뷰💚초고층🧡둘만의 일상이 특별해지는 이곳💜",
             "address": "서울 용산구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "엘리베이터",
@@ -362,7 +362,7 @@
             "type": "아파트 전체",
             "name": "[2one] Perfect house for group in Gangnam",
             "address": "서울 강남구 논현동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "다리미",
@@ -383,7 +383,7 @@
             "type": "집 전체",
             "name": "cozy mw stay 한강 5분 거리 망원동 마포구",
             "address": "서울 마포구 망원동",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "옷걸이",
@@ -404,7 +404,7 @@
             "type": "아파트 전체",
             "name": "[MEZZA HOUSE] 합정/홍대/상수 여의도 인접. 복층 구조",
             "address": "서울 영등포구",
-            "host_id": "admin",
+            "host_id": "admin@naver.com",
             "amenties": [
                 "무선인터넷",
                 "다리미",

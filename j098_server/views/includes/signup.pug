@@ -1,25 +1,23 @@
-h2 회원가입
-form(action='/signup', method='post')
+div.modalTop
+    button &times
+div.modalTitle 회원가입
+
+form.signupForm(action='/signup', method='post')
     table
         tr
             td
-                input(type='text', placeholder='아이디',name='id')
+                input.modalInput(type='email', placeholder='이메일',name='id', required)
         tr
             td
-                input(type='password', placeholder='비밀번호', name='password')
+                input.modalInput(type='password', placeholder='비밀번호', name='password', required)
         tr
             td
-                input(type='text', placeholder='이름',name='name')
+                input.modalInput(type='text', placeholder='이름',name='name', required)
         tr
             td
-                input(type='text', placeholder='전화번호', name='phone')
+                input.modalInput(type='text', placeholder='전화번호: 010-0000-0000', name='phone', required)
         tr
             td
-                input(type='text', placeholder='이메일', name='email')
-        tr
-            td
-                input(type='submit', value='회원가입')
-button &times
-
+                input.modalSubmit(type='submit', value='회원가입')
 
         

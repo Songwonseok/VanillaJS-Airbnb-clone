@@ -33,7 +33,6 @@
   height: 42px;
   cursor: pointer;
   margin-left: auto;
-  z-index: 1;
 }
 
 .hostBtn:hover {
@@ -255,24 +254,4 @@
     display:flex;
     justify-content: center;
     align-items: center;
-}
-
-.modal_overlay{
-    background-color: rgba(0,0,0,0.6);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.modal_content {
-    background-color: white;
-    padding: 50px 100px;
-    text-align: center;
-    position: relative;
-    border-radius: 10px;
-    width: 40%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.hidden {
-    display:none;
 }

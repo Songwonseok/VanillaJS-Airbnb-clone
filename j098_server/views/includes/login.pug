@@ -1,15 +1,17 @@
-h2 로그인
-form(action='/login', method='post')
+div.modalTop
+    button &times
+div.modalTitle 로그인
+form.loginForm(action='/login', method='post')
     table
         tr
             td
-                input(type='text', placeholder='아이디',name='id')
+                input.modalInput(type='email', placeholder='이메일',name='id', required)
         tr
             td
-                input(type='password', placeholder='비밀번호', name='password')
+                input.modalInput(type='password', placeholder='비밀번호', name='password', required)
         tr
             td
-                input(type='submit', value='로그인')
-button &times
+                input.modalSubmit(type='submit', value='로그인')
+
 
         

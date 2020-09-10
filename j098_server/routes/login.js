@@ -7,24 +7,18 @@ const auth = require('../middleware/auth')
 const sm = require('../session/sessionManager')
 const db = require('../database/MyDB')
 
-router.get('/login', (req, res, next) => {
-    res.render('login');
-});
-
-
-// 
 router.post('/login', async (req, res, next) => {
     const { id, password } = req.body
     const user = await db.findOne('users', id);
     
     // 1. ID 체크
     if (!user) {
-        res.send('<script type="text/javascript"> alert("해당 ID가 없습니다."); window.location.href = "/login"</script>');
+        res.send('<script type="text/javascript"> alert("해당 ID가 없습니다."); window.location.href = "/"</script>');
     } else {
         // 2. Password 체크
         bcrypt.compare(password, user.password, (err,isMatch) => {
             if (!isMatch) 
-                res.send('<script type="text/javascript"> alert("비밀번호가 틀렸습니다."); window.location.href = "/login"</script>');
+                res.send('<script type="text/javascript"> alert("비밀번호가 틀렸습니다."); window.location.href = "/"</script>');
         });
         // 3. ID와 Password가 맞다면 세션에 추가하고 Cookie 생성
         const sid = createSid();

@@ -3,11 +3,11 @@ include includes/mixins/searchResultCard
 block script
 
 block content
-    hr.header
+    hr
     section.searchSection
-        div.searchHeader
-            p #{roomList.length}개의 숙소 | #{Number(check_in.slice(5,7))}월 #{Number(check_in.slice(8,10))}일 - #{Number(check_out.slice(5,7))}월 #{Number(check_out.slice(8,10))}일 | 게스트 #{personnel}명
-            h1 #{address}의 숙소
+        div.searchHeader 
+            div #{roomList.length}개의 숙소 | #{Number(check_in.slice(5,7))}월 #{Number(check_in.slice(8,10))}일 - #{Number(check_out.slice(5,7))}월 #{Number(check_out.slice(8,10))}일 | 게스트 #{personnel}명
+            div.largeText #{address}의 숙소
         div.searchContainer
             each room in roomList
                 +searchResultCard(room)
