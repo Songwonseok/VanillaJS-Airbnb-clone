@@ -1,0 +1,10 @@
+mixin searchResultCard(room)
+    div.searchItem
+        img.roomImg(src=room.image)
+        div=room.type+'.'+room.address
+        div.roomName=room.name
+        div.roomBooking
+            div
+                div.nightPrice='₩'+(room.price/room.nights)+"/"+room.nights+'박'
+                div.totalPrice='총 요금: ₩'+room.price
+            button.bookingBtn 예약하기

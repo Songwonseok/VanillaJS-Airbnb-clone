@@ -5,11 +5,9 @@ const db = require('../database/MyDB')
 const DAY = 1000*60*60*24;
 const auth = require('../middleware/auth')
 
-
-
 router.get('/', async (req, res, next) => {
     const user = (req.user)? req.user: null;
-    res.render('main', { title: 'airbnb', message: '메인페이지', user: user, test:'abcde' });
+    res.render('main', { user: user});
 });
 
 // 주소, 체크인, 체크아웃, 인원
@@ -45,8 +43,7 @@ router.post('/search',async (req, res, next) => {
         room.nights = nights;
         searchResult.push(room);
     })
-    
-    res.send(searchResult);
+    res.render('search', { user:req.user, address: address, check_in: check_in, check_out: check_out, personnel: personnel, roomList: searchResult})
 })
 
 

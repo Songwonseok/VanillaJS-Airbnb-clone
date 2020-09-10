@@ -1,60 +1,424 @@
 {
-    "auto_increment": 4,
+    "auto_increment": 21,
     "PK": "id",
     "rows": [
         {
             "id": 1,
-            "name": "서대문아파트",
-            "address": "서울시 서대문구 남가좌동 서대문아파트 101호",
+            "type": "개인실",
+            "name": "[Dongdaemun / Sindang] 서울CityviewX빔프로젝터 복층형 House",
+            "address": "서울 중구 신당동",
             "host_id": "admin",
             "amenties": [
-                "와이파이",
-                "에어컨",
-                "주차장"
+                "무선인터넷",
+                "헤어드라이어",
+                "엘리베이터",
+                "옷걸이",
+                "노트북 작업 공간"
             ],
-            "capacity": 4,
+            "capacity": 2,
             "bedroom": 1,
-            "bed": 2,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 53000,
+            "weekend_price": 70000,
+            "image": "https://a0.muscache.com/im/pictures/550a62d1-3706-4503-b3a9-f95b21653597.jpg?aki_policy=x_large"
+        },
+        {
+            "id": 2,
+            "type": "개인실",
+            "name": "인터프렌즈 J. 포근한 여성전용 개인실 Women only",
+            "address": "서울 강남구 논현동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "건조기",
+                "주방",
+                "다리미"
+            ],
+            "capacity": 3,
+            "bedroom": 1,
+            "bed": 1,
             "bathroom": 1,
             "weekday_price": 30000,
             "weekend_price": 45000,
-            "image" : ""
-        },
-        {
-            "name": "힐튼호텔",
-            "address": "서울시 서대문구 힐튼",
-            "host_id": "admin",
-            "amenties": [
-                "와이파이",
-                "에어컨",
-                "주차장"
-            ],
-            "capacity": 4,
-            "bedroom": 1,
-            "bed": 2,
-            "bathroom": 1,
-            "weekday_price": 50000,
-            "weekend_price": 70000,
-            "id": 2,
-            "image": ""
+            "image": "https://a0.muscache.com/im/pictures/c8f4ef83-1451-4828-8151-a12adbb9dc40.jpg?aki_policy=x_large"
         },
         {
             "id": 3,
-            "name": "힐튼호텔",
-            "address": "서울시 서대문구 힐튼",
+            "type": "아파트 전체",
+            "name": "[STAY H#1]TimeSquareView!(NETFLIX)Near Station.복층",
+            "address": "서울 영등포구",
             "host_id": "admin",
             "amenties": [
-                "와이파이",
-                "에어컨",
+                "무선인터넷",
+                "헤어드라이어",
+                "건조기",
+                "주방",
+                "다리미"
+            ],
+            "capacity": 3,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 60000,
+            "weekend_price": 75000,
+            "image": "https://a0.muscache.com/im/pictures/16a862f3-519b-45d1-ad1f-df169b309d5c.jpg?aki_policy=x_large"
+        },
+        {
+            "id": 4,
+            "type": "게스트 스위트 전체",
+            "name": "dmyk_Carré",
+            "address": "서울 종로구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "옷걸이"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 22000,
+            "weekend_price": 30000,
+            "image": "https://a0.muscache.com/im/pictures/35ecadd2-da5d-4db1-92bd-867ec152921d.jpg?aki_policy=large"
+        },
+        {
+            "id": 5,
+            "type": "게스트 스위트 전체",
+            "name": "Designer hyojung's house 루프탑 이용! 명동.남산이 바로 앞!",
+            "address": "서울 중구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "엘리베이터"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 50000,
+            "weekend_price": 60000,
+            "image": "https://a0.muscache.com/im/pictures/8e0a4170-862d-4596-ab04-9b1565bfe189.jpg?aki_policy=large"
+        },
+        {
+            "id": 6,
+            "type": "집 전체",
+            "name": "Seochon Night",
+            "address": "서울 종로구 체부동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "필수품목"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 34000,
+            "weekend_price": 40000,
+            "image": "https://a0.muscache.com/im/pictures/3ac1fd45-cd3c-4640-bd09-83875eb389a5.jpg?aki_policy=large"
+        },
+        {
+            "id": 7,
+            "type": "아파트 전체",
+            "name": "신촌 개강 '대학생들의 방' 조경디자인생방 & 루프탑 바베큐 파티",
+            "address": "서울 서대문구 신촌동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "필수품목",
+                "노트북 작업공간"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 45000,
+            "weekend_price": 52000,
+            "image": "https://a0.muscache.com/im/pictures/09892132-588b-4411-a4c4-ae2eee2c5e63.jpg?aki_policy=large"
+        },
+        {
+            "id": 8,
+            "type": "아파트 전체",
+            "name": "#2 구로디지털단지역 2분도보#깨끗 깔끔 안락 힐링# 코로나 피해서 호캉스 하기 좋은 공간",
+            "address": "서울 구로구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "필수품목",
+                "엘리베이터"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 2,
+            "bathroom": 1,
+            "weekday_price": 34000,
+            "weekend_price": 42000,
+            "image": "https://a0.muscache.com/im/pictures/390b7aff-04c7-4d16-94b2-d318f1404918.jpg?aki_policy=large"
+        },
+        {
+            "id": 9,
+            "type": "아파트 전체",
+            "name": "신촌 개강 '대학생들의 방' 미대생 방 & 루프탑 바베큐파티",
+            "address": "서울 서대문구 신촌동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "필수품목",
+                "노트북 작업 공간"
+            ],
+            "capacity": 4,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 48000,
+            "weekend_price": 60000,
+            "image": "https://a0.muscache.com/im/pictures/c453a182-cd73-4a4c-a0f6-a404baad8f3b.jpg?aki_policy=large"
+        },
+        {
+            "id": 10,
+            "type": "아파트 전체",
+            "name": "롯데월드/올림픽공원/ 아산병원에 최적❤️",
+            "address": "서울 송파구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "엘리베이터",
+                "옷걸이"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 30000,
+            "weekend_price": 42000,
+            "image": "https://a0.muscache.com/im/pictures/31338613-e5e4-4ef0-9e0d-c24c59441543.jpg?aki_policy=large"
+        },
+        {
+            "id": 11,
+            "type": "게스트용 별채 전체",
+            "name": "대학로 Min's House!! 302",
+            "address": "서울 종로구 이화동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "헤어드라이어",
+                "주방",
+                "아침식사",
                 "주차장"
             ],
             "capacity": 4,
             "bedroom": 1,
             "bed": 2,
             "bathroom": 1,
-            "weekday_price": 50000,
+            "weekday_price": 23000,
+            "weekend_price": 30000,
+            "image": "https://a0.muscache.com/im/pictures/cefc433c-0b10-497e-ab8b-a048395381d3.jpg?aki_policy=large"
+        },
+        {
+            "id": 12,
+            "type": "아파트 전체",
+            "name": "[SUBWAY 3MIN] 신방화 [407]김포공항10분",
+            "address": "서울 강서구 방화동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "엘리베이터",
+                "주방",
+                "다리미",
+                "주차장"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 2,
+            "bathroom": 1,
+            "weekday_price": 27000,
+            "weekend_price": 36000,
+            "image": "https://a0.muscache.com/im/pictures/8e3dca1e-b7d1-4607-9907-081bfb6c96d0.jpg?aki_policy=large"
+        },
+        {
+            "id": 13,
+            "type": "개인실",
+            "name": "57 Myeongdong Hostel (Deluxe Double)//주차불가",
+            "address": "서울 중구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "엘리베이터",
+                "아침식사",
+                "헤어드라이어",
+                "필수품목"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 32000,
+            "weekend_price": 40000,
+            "image": "https://a0.muscache.com/im/pictures/0fbf7ebd-84ca-4f84-abf4-2a3f73937730.jpg?aki_policy=large"
+        },
+        {
+            "id": 14,
+            "type": "집 전체",
+            "name": "르릿 동대문 #401(복층타입) / DDP, APM Place 도보 3분",
+            "address": "서울 중구 광희동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "건조기",
+                "주방",
+                "헤어드라이어",
+                "다리미"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 62500,
             "weekend_price": 70000,
-            "image": ""
+            "image": "https://a0.muscache.com/im/pictures/f7a808cc-cbd8-458b-b5b6-26142967f98f.jpg?aki_policy=large"
+        },
+        {
+            "id": 15,
+            "type": "개인실",
+            "name": "Jin Jin House",
+            "address": "서울 용산구 한남동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "건조기",
+                "주방",
+                "헤어드라이어",
+                "옷걸이",
+                "필수품목"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 23000,
+            "weekend_price": 30000,
+            "image": "https://a0.muscache.com/im/pictures/8622fd11-6be6-4d55-b492-dbcf81b916ef.jpg?aki_policy=large"
+        },
+        {
+            "id": 16,
+            "type": "호텔 객실",
+            "name": "#연희장#프라이빗#홍대/연남동/#소독 #청결 #단독객실 # #루프탑",
+            "address": "서울 서대문구 연희동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "건조기",
+                "주방",
+                "건조기",
+                "다리미",
+                "주차장"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 39000,
+            "weekend_price": 45000,
+            "image": "https://a0.muscache.com/im/pictures/17af19bc-eb72-417c-8824-fbb44a06218b.jpg?aki_policy=large"
+        },
+        {
+            "id": 17,
+            "type": "아파트 전체",
+            "name": "용산역2min_가장 청결한 곳_한강뷰💙시티뷰💚초고층🧡둘만의 일상이 특별해지는 이곳💜",
+            "address": "서울 용산구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "엘리베이터",
+                "주방",
+                "헤어드라이어",
+                "옷걸이"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 95000,
+            "weekend_price": 120000,
+            "image": "https://a0.muscache.com/im/pictures/ff94cdd8-5843-47c5-b1a3-b7efaf22bda5.jpg?aki_policy=large"
+        },
+        {
+            "id": 18,
+            "type": "아파트 전체",
+            "name": "[2one] Perfect house for group in Gangnam",
+            "address": "서울 강남구 논현동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "다리미",
+                "주방",
+                "헤어드라이어",
+                "옷걸이"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 45000,
+            "weekend_price": 60000,
+            "image": "https://a0.muscache.com/im/pictures/1c8c8721-b5c3-443c-b7c2-4311f84934fc.jpg?aki_policy=large"
+        },
+        {
+            "id": 19,
+            "type": "집 전체",
+            "name": "cozy mw stay 한강 5분 거리 망원동 마포구",
+            "address": "서울 마포구 망원동",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "옷걸이",
+                "주방",
+                "헤어드라이어",
+                "필수품목"
+            ],
+            "capacity": 2,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 70000,
+            "weekend_price": 85000,
+            "image": "https://a0.muscache.com/im/pictures/3bd3a399-43da-49ed-bf99-44bacab40118.jpg?aki_policy=large"
+        },
+        {
+            "id": 20,
+            "type": "아파트 전체",
+            "name": "[MEZZA HOUSE] 합정/홍대/상수 여의도 인접. 복층 구조",
+            "address": "서울 영등포구",
+            "host_id": "admin",
+            "amenties": [
+                "무선인터넷",
+                "다리미",
+                "주방",
+                "헤어드라이어",
+                "케이블 TV"
+            ],
+            "capacity": 4,
+            "bedroom": 1,
+            "bed": 1,
+            "bathroom": 1,
+            "weekday_price": 52000,
+            "weekend_price": 60000,
+            "image": "https://a0.muscache.com/im/pictures/839643c4-7675-4784-a2e5-4523476f883d.jpg?aki_policy=x_large"
         }
     ]
 }

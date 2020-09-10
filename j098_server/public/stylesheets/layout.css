@@ -16,8 +16,9 @@ header {
 }
 
 footer {
-  padding: 5vw;
+  padding: 8vw;
   padding-top: 2vw;
+  height: 380px;
   margin-top: auto;
   background-color: rgb(247,247,247);
 }
