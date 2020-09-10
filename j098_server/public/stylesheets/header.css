@@ -177,8 +177,7 @@
 }
 
 .searchBar {
-  position: absolute;
-  margin-left: 10vw;
+  flex:1
 }
 
 .searchBtn{
@@ -195,8 +194,9 @@
 }
 
 .search_container {
+  position: absolute;
+  right: 25%;  
   display: flex;
-  flex: 2;
   height: 65px;
   width: 820px;
   border: solid;
