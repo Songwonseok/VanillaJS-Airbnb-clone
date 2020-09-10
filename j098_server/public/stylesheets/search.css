@@ -1,27 +1,32 @@
 .searchSection{
-    margin: 0px 12vw 20px 12vw;
+    margin: 30px 12vw 20px 12vw;
+}
+
+.searchHeader{
+    font-size: 15px;
+}
+
+.largeText {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 hr {
     border-top: 1px solid rgb(240,240,240);
-}
-.searchHeader{
-
 }
 
 .searchContainer{
     display:flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-around;
     margin: 40px 0px 40px 0px;
 }
 
 .searchItem{
+    flex:none;
     width: 270px;
     height: 340px;
-    margin-right: auto;
-
+    margin-right: 15px;
 }
 
 .roomImg {
