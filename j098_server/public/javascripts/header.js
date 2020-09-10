@@ -77,9 +77,33 @@ const addModalListener = (className) => {
     openBtn.addEventListener("click", openModal);
 }
 
+const settingMinDate = () => {
+    const checkIn = document.querySelector('#checkIn');
+    const today = new Date();
+    checkIn.min = dateToString(today);
+}
+
+const checkInListener = () => {
+    const checkIn = document.querySelector('#checkIn');
+    const checkOut = document.querySelector('#checkOut');
+
+    checkIn.addEventListener('input', function(){
+        const nextDay = new Date(this.value);
+        nextDay.setDate(nextDay.getDate() + 1);
+        checkOut.min = dateToString(nextDay);
+        checkOut.removeAttribute('disabled');
+    })
+}
+
+const dateToString = (date) => {
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, 0)}-${String(date.getDate()).padStart(2, 0)}`
+}
+
 (function init () {
     searchTabHandler();
     dropdownHandler();
+    settingMinDate();
+    checkInListener();
     modalHandler(['login','signup']);
 })()
 

@@ -16,16 +16,16 @@ nav.header_container
                 form.search_container(action='/search', method='post')
                     div.search_item
                         label(for="address") 위치
-                        input#address(type='text', placeholder='어디로 여행가세요?', name='address')
+                        input#address(type='text', placeholder='어디로 여행가세요?', name='address', required)
                     div.search_item
                         label(for="checkIn") 체크인
-                        input#checkIn(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_in')
+                        input#checkIn(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_in', required)
                     div.search_item
                         label(for="checkOut") 체크아웃
-                        input#checkOut(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_out')
+                        input#checkOut(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='check_out',disabled, required)
                     div.search_item
                         label(for="personnel") 인원
-                        input#personnel(type='number', placeholder='게스트 추가', name='personnel')
+                        input#personnel(type='number', placeholder='게스트 추가', name='personnel', min="1", required)
                     button.searchBtn 
                         i(class="fas fa-search fa-2x")
             div(class='tab_box', id='experience')
@@ -33,11 +33,11 @@ nav.header_container
                     div.search_item
                         label(for="exp_address") 위치
                         br
-                        input#exp_address(type='text', placeholder='어디로 여행가세요?', name='address')
+                        input#exp_address(type='text', placeholder='어디로 여행가세요?', name='address', required)
                     div.search_item
                         label(for="exp_date") 날짜
                         br
-                        input#exp_date(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='date')
+                        input#exp_date(type="text", placeholder="날짜 추가", onfocus="(this.type='date')", name='date', required)
                     button.searchBtn
                         i(class="fas fa-search fa-2x")
     div(class="header_item hostBtn")
