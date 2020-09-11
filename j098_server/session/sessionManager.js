@@ -21,11 +21,9 @@ class SessionManager extends EventEmitter{
     // 해당 sid를 사용할때마다 세션의 시간이 끝났으면 삭제, 30분 이하로 남았으면 갱신
     get(sid){
         const session = this.hashTable.get(sid);
-        console.log(session.remainingTime);
         if(session){
             if (session.remainingTime <0){
                 console.log(session.remainingTime);
-                console.log('세션파괴');
                 this.destroySession(sid);
                 return null;
             }
@@ -42,11 +40,8 @@ class SessionManager extends EventEmitter{
     }
 
     deleteSession(sid){
-        
         return this.hashTable.delete(sid)
     }
 }
 
-const sessionManager = new SessionManager();
-
-module.exports = sessionManager;
+module.exports = SessionManager;

@@ -7,9 +7,11 @@ const logger = require('morgan');
 const Router = require('./routes/index')
 
 const app = express();
-const sm = require('./session/sessionManager')
+const SessionManager = require('./session/sessionManager')
 const db = require('./database/MyDB')
 const favicon = require('serve-favicon');
+
+const sm = new SessionManager();
 
 // 1시간에 한번씩 세션 정리
 setInterval(() => {
@@ -27,6 +29,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function (req, res, next) {
+  if (req.sm) next();
+  req.sm = sm;
+  next();
+})
 
 app.use(Router);
 

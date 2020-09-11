@@ -3,8 +3,6 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 
-const auth = require('../middleware/auth')
-const sm = require('../session/sessionManager')
 const db = require('../database/MyDB')
 
 router.post('/login', async (req, res, next) => {
@@ -21,24 +19,24 @@ router.post('/login', async (req, res, next) => {
                 res.send('<script type="text/javascript"> alert("비밀번호가 틀렸습니다."); window.location.href = "/"</script>');
         });
         // 3. ID와 Password가 맞다면 세션에 추가하고 Cookie 생성
-        const sid = createSid();
-        sm.set(sid, id);
+        const sid = createSid(req.sm);
+        req.sm.set(sid, id);
         res.cookie('sid', sid);
-        res.redirect('/');
+        res.send('<script type="text/javascript"> alert("로그인 되었습니다."); window.location.href = "/"</script>');
     }
 });
 
 
 router.get('/logout', (req, res, next) => {
     const sid = req.cookies.sid
-    if(sid) sm.deleteSession(sid);
+    if(sid) req.sm.deleteSession(sid);
     res.clearCookie('sid');
     res.redirect('/');
 })
 
 
 
-function createSid(){
+function createSid(sm){
     const length = 15;
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 

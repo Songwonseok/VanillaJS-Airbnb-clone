@@ -4,12 +4,12 @@
     "rows": [
         {
             "id": 1,
-            "check_in": "2020-09-04",
-            "check_out": "2020-09-05",
-            "nights": 1,
-            "room_id": 1,
+            "check_in": "2020-09-12",
+            "check_out": "2020-09-21",
+            "nights": 9,
+            "room_id": 11,
             "user_id": "admin@naver.com",
-            "price": 30000
+            "price": 228000
         }
     ]
 }

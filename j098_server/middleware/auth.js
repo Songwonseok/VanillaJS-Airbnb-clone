@@ -9,11 +9,11 @@ let auth = async (req, res, next) => {
     // 있다면 해당하는 user가 존재하는지 확인
     
     const sid = req.cookies.sid;
-    if (!sid || !sm.hashTable.has(sid)){
+    if (!sid || !req.sm.hashTable.has(sid)){
         res.send('<script type="text/javascript"> alert("로그인 해주세요"); history.back();</script>');
     }
     else {
-        const session = sm.get(sid);
+        const session = req.sm.get(sid);
         const user = await db.findOne('users', session.storage.id);
 
         if (!user){

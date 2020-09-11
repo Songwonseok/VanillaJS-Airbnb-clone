@@ -5,10 +5,7 @@ const signup = require('./signup')
 const login = require('./login')
 const main = require('./main')
 
-const sm = require('../session/sessionManager')
-const db = require('../database/MyDB')
 const sessionCheck = require('../middleware/sessionCheck')
-
 
 router.use(sessionCheck);
 router.use(signup);

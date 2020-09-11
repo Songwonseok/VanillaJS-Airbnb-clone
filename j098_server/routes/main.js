@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require('../database/MyDB')
 const DAY = 1000*60*60*24;
 const auth = require('../middleware/auth')
-const sm = require('../session/sessionManager')
 
 router.get('/', async (req, res, next) => {
     const user = (req.user)? req.user: null;
@@ -57,7 +56,7 @@ router.post('/reserve', auth,async (req, res, next) => {
     const reservePost = JSON.parse(req.body.reserveInfo)
     await db.insert('reserved', reservePost)
 
-    res.redirect('/')
+    res.send('<script type="text/javascript"> alert("예약이 완료되었습니다."); history.back();</script>');
 })
 
 

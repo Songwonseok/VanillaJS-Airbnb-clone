@@ -52,6 +52,7 @@ hr {
     background-color: white;
     cursor: pointer;
     border-radius: 12px;
+    border:none;
     font-weight: bold;
     border-width: 1px;
 }

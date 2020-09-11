@@ -19,6 +19,18 @@
             "password": "$2b$10$B.AYOt.R9tOamJ1kr8MRXu78RJ9rZp6vRhOplGNpsMoxkedzB8EdG",
             "name": "테스터",
             "phone": "010-5555-7777"
+        },
+        {
+            "id": "zxcv@naver.com",
+            "password": "$2b$10$sHNeot37mdWDuUHHZ76jR.GKYYMrX5RvPXyGvwinte9lZI6pI.//O",
+            "name": "ttt",
+            "phone": "010-5555-4444"
+        },
+        {
+            "id": "zxcv12@naver.com",
+            "password": "$2b$10$9nqD76K0QVKnPDH/q1mO2.5dMUWV.xXhn8Zu7SfFjMJmLeCxJnd9.",
+            "name": "asdf",
+            "phone": "010-5555-4444"
         }
     ]
 }

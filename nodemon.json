@@ -1,0 +1,5 @@
+{
+    "watch" : ["public", "routes", "src", "views"],
+    "ext": "js,css,pug",
+    "exec": "node ./j098_server/bin/www"
+}
