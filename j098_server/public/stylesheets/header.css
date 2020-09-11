@@ -14,9 +14,8 @@
   padding: 12vw;
   padding-top: 20px;
   padding-bottom: 0;
-  flex-wrap: wrap;
   display: flex;
-  justify-content:center;
+  justify-content:space-between;
 }
 
 .host{
@@ -135,7 +134,7 @@
 .tab_menu_container {
   display:flex;
   justify-content: center;
-  padding-left: 10%;
+  padding-left:10%;
   z-index: -1;
 }
 .tab_menu_btn {
@@ -170,7 +169,7 @@
 }
 .tab_box {
   display:none;
-  padding:0px 20px 20px 20px;
+  padding:20px;
 
 }
 .tab_box.on {
@@ -178,7 +177,7 @@
 }
 
 .searchBar {
-  flex:1;
+  flex:1
 }
 
 .searchBtn{
@@ -195,6 +194,9 @@
 }
 
 .search_container {
+  position: absolute;
+  right: 23%;
+  top: 120px;  
   display: flex;
   height: 65px;
   width: 820px;
