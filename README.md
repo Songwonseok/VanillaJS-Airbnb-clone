@@ -1,7 +1,4 @@
-# [J098] javascript-w1-airbnb
-
-부스트캠프 멤버십 javascript 1~2주차 과제
-
+# ✈️ AirBnb 클론코딩 프로젝트
 
 
 ## Introduction
