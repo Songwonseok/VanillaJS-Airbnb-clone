@@ -18,7 +18,6 @@ setInterval(() => {
   sm.emit('updateSession');
 }, 60*60*1000)
 
-
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
